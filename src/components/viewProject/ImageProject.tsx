@@ -3,11 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useCallback, useState } from "react";
+import { MdOutlineTransitEnterexit } from "react-icons/md";
 export default function ImageProject(props) {
   const [open, setOpen] = useState(false);
   const settings = {
     arrows: false,
-    dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
@@ -23,7 +23,7 @@ export default function ImageProject(props) {
     <>
       <div className="w-full">
         <h2
-          className="text-base font-bold mb-1 text-blueColor"
+          className="text-base font-bold mb-1 text-blueColor hover:cursor-pointer"
           onClick={() => {
             openHandle(true);
           }}
@@ -37,19 +37,21 @@ export default function ImageProject(props) {
               openHandle(false);
             }}
           >
-            <div className="w-1/2 h-2/3 flex justify-center">
-              <Slider
-                {...settings}
-                className="w-full h-full flex justify-center relative aspect-square "
-              >
+            <div
+              className="w-1/4 h-1/2 flex justify-center items-center top-[50px]  absolute"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+            >
+              <Slider {...settings} className="w-4/5 h-full">
                 {props.images.map((el) => {
                   return (
                     <Image
                       src={el}
                       alt={el}
                       width={100}
-                      height={100}
-                      className="max-h-[300px] "
+                      height={500}
+                      className="rounded-xl border-2"
                     />
                   );
                 })}
