@@ -13,6 +13,8 @@ module.exports = {
       beigeColor: "#F7F6F3",
       wineColor: "#990055",
       greenColor: "#669900",
+      blackColor: "#000000",
+      opacityColor: "rgba(0, 0, 0, 0.5)",
     },
     extend: {
       fontSize: {

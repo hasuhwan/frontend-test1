@@ -8,6 +8,7 @@ const color: string[] = [
   "text-wineColor",
   "text-greenColor",
 ];
+const regexp: RegExp = new RegExp(/^https?/, "i");
 const profileData: [string, string, boolean][] = [
   ["class", color[0], false],
   [" Hasuhwan", color[1], false],
@@ -45,4 +46,4 @@ const profileData: [string, string, boolean][] = [
   ["}", color[2], true],
 ];
 
-export { intro, profileData };
+export { intro, profileData, regexp };
