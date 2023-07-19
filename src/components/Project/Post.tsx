@@ -23,7 +23,7 @@ export default function Post(props: IpropsValue) {
         />
       </div>
       <div className="w-full h-1/4 justify-center items-center flex">
-        <h2 className=" font-bold text-base">{props.data.title}</h2>
+        <span className=" font-bold text-base">{props.data.title}</span>
       </div>
     </div>
   );

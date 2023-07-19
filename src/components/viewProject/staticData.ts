@@ -1,4 +1,14 @@
-const viewProjectData = {
+interface IdescriptionValue {
+  [key: string]: string | string[];
+}
+interface IdetailData {
+  img: string[];
+  description: IdescriptionValue;
+}
+interface IviewProjectData {
+  [key: string]: IdetailData;
+}
+const viewProjectData: IviewProjectData = {
   twitter: {
     img: [],
     description: {
@@ -25,6 +35,12 @@ const viewProjectData = {
     img: [
       "/challenge/challengeHomePage.gif",
       "/challenge/challengePostHabit.gif",
+      "/challenge/challengeHabit.gif",
+      "/challenge/challengePostAuth.gif",
+      "/challenge/challengeSearchHabit.gif",
+      "/challenge/challengeCategory.gif",
+      "/challenge/challengeReview.gif",
+      "/challenge/challengeMypage.gif",
     ],
     description: {
       진행기간: "2023.01.03 ~ 2023.02.02",
@@ -90,3 +106,4 @@ const viewProjectData = {
   },
 };
 export { viewProjectData };
+export type { IdetailData, IdescriptionValue };

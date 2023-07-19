@@ -12,3 +12,13 @@ body,
   height: inherit;
   display: flex;
 }
+@layer base {
+  h2 {
+    @apply text-mid font-bold mb-span;
+  }
+}
+@layer components {
+  .header-icon {
+    @apply w-[30px] h-[30px] m-base hover:cursor-pointer;
+  }
+}

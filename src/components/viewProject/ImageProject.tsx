@@ -3,25 +3,27 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useCallback, useState } from "react";
-import { MdOutlineTransitEnterexit } from "react-icons/md";
-export default function ImageProject(props) {
+interface IpropsValue {
+  images: string[];
+}
+export default function ImageProject(props: IpropsValue) {
   const [open, setOpen] = useState(false);
   const settings = {
     arrows: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
   const openHandle = useCallback(
-    (bool) => {
+    (bool: boolean) => {
       setOpen(bool);
     },
     [open]
   );
   return (
     <>
-      <div className="w-full">
+      <div className="w-full flex justify-start">
         <h2
           className="text-base font-bold mb-1 text-blueColor hover:cursor-pointer"
           onClick={() => {

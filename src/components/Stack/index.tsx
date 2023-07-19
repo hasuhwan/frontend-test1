@@ -8,7 +8,7 @@ export default function Stack() {
         {Object.keys(stackData).map((key, index) => {
           return (
             <div className="" key={index}>
-              <h2 className=" text-mid font-bold mb-span">{key}</h2>
+              <h2>{key}</h2>
               <ul>
                 {stackData[key].map(([title, body, icon], idx) => {
                   return (

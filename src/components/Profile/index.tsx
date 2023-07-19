@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Particle from "../Particle";
 import Link from "next/link";
-import { useMemo } from "react";
 import { intro, profileData, regexp } from "./staticData";
 export default function Profile() {
   return (
@@ -19,9 +18,7 @@ export default function Profile() {
         </div>
 
         <div className=" col-start-2 col-span-4 p-4 flex flex-col">
-          <h2 className=" text-mid font-bold mb-span">
-            되새김질 잘 하는 소 같은 개발자
-          </h2>
+          <h2>되새김질 잘 하는 소 같은 개발자</h2>
           <div className="w-full mb-5">
             {intro.split("br").map((el, idx) => {
               return (
@@ -47,12 +44,10 @@ export default function Profile() {
                 );
               }
               return (
-                <>
-                  <span className={`${color}`} key={idx}>
-                    {url}
-                  </span>
+                <span className={`${color}`} key={idx}>
+                  {url}
                   {br ? <br /> : null}
-                </>
+                </span>
               );
             })}
           </div>
