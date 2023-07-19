@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Particle from "../Particle";
 import Link from "next/link";
 import { intro, profileData, regexp } from "./staticData";
@@ -7,14 +6,7 @@ export default function Profile() {
     <Particle title="About Me">
       <div className="w-full grid grid-rows-1 grid-cols-5 justify-center items-center ">
         <div className="w-full h-3/4 max-h-[450px] relative">
-          <Image
-            src="/profile.jpeg"
-            alt="proifle"
-            fill={true}
-            placeholder="blur"
-            blurDataURL="/profile.jpeg"
-            className=" rounded-lg "
-          />
+          <img src="/profile.jpeg" alt="proifle" className=" rounded-lg " />
         </div>
 
         <div className=" col-start-2 col-span-4 p-4 flex flex-col">

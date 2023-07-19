@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { dataValue } from "./staticData";
 interface IpropsValue {
   data: dataValue;
@@ -13,13 +12,11 @@ export default function Post(props: IpropsValue) {
         return props.nav(props.value);
       }}
     >
-      <div className="w-full h-3/4 aspect-square relative ">
-        <Image
+      <div className="w-full aspect-square relative overflow-hidden flex justify-center ">
+        <img
           src={props.data.imgSrc}
           alt={props.data.title}
-          fill={true}
-          style={{ objectFit: "cover" }}
-          className="rounded-t-xl"
+          className="rounded-t-xl h-full object-cover"
         />
       </div>
       <div className="w-full h-1/4 justify-center items-center flex">

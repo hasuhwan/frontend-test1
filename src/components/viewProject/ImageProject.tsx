@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -46,13 +45,12 @@ export default function ImageProject(props: IpropsValue) {
               }}
             >
               <Slider {...settings} className="w-4/5 h-full">
-                {props.images.map((el) => {
+                {props.images.map((el, idx) => {
                   return (
-                    <Image
+                    <img
                       src={el}
                       alt={el}
-                      width={100}
-                      height={500}
+                      key={idx}
                       className="rounded-xl border-2"
                     />
                   );
