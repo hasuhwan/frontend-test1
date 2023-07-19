@@ -1,12 +1,14 @@
 import Particle from "../Particle";
 import Link from "next/link";
+import profile from "../../../public/profile.jpeg";
+import Image from "next/image";
 import { intro, profileData, regexp } from "./staticData";
 export default function Profile() {
   return (
     <Particle title="About Me">
       <div className="w-full grid grid-rows-1 grid-cols-5 justify-center items-center ">
-        <div className="w-full h-3/4 max-h-[450px] relative">
-          <img src="profile.jpeg" alt="proifle" className=" rounded-lg " />
+        <div className="w-full h-3/4 max-h-[450px] flex items-center relative">
+          <Image src={profile} alt="proifle" className=" rounded-lg " />
         </div>
 
         <div className=" col-start-2 col-span-4 p-4 flex flex-col">
