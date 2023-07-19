@@ -7,7 +7,7 @@ export default function Profile() {
       <div className="w-full grid grid-rows-1 grid-cols-5 justify-center items-center ">
         <div className="w-full h-3/4 max-h-[450px] relative">
           <img
-            src="./profile/profile.jpeg"
+            src="profile/profile.jpeg"
             alt="proifle"
             className=" rounded-lg "
           />
